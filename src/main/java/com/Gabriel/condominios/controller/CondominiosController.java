@@ -27,6 +27,12 @@ public class CondominiosController {
         return"Sistema";
     }
     
+    @GetMapping("/Financeiro")
+    public String Financeiro(){
+        return"Financeiro";
+    }
+    
+    
     @GetMapping("/CadGastos")
     public String CadGastos(){
         return"CadGastos";
