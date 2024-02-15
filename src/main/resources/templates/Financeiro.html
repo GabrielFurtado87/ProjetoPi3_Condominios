@@ -27,5 +27,42 @@
                                 </div>
                             </div>
                         </nav>
+                        
+                        
+                        <!-- CORPO DO FINANCEIRO -->
+                        
+                        <div class="row row-cols-1 row-cols-md-3 g-4 d-flex justify-content-center align-items-center mt-4 ">
+                            <div class="col">
+                                <div class="card">                                    
+                                        <div class="card-body">
+                                            <h5 class="card-title">Cadastro de gastos</h5>
+                                            <p class="card-text">Clique aqui para cadastrar os gastos do condomínio.</p>
+                                            <a th:href="@{/CadGastos}"><button class="w-100 btn btn-lg btn-success" type="submit">Cadastro de gastos</button></a>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Pesquisa de gastos</h5>
+                                            <p class="card-text">Clique aqui para pesquisar os gastos do condomínio.</p>
+                                            <a th:href="@{/pesqGastos}"><button class="w-100 btn btn-lg btn-success" type="submit">Pesquisa de gastos</button></a>
+                                        </div>
+                                </div>
+                            </div>                            
+                            <div class="col">
+                                <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Pesquisa de inadimplentes</h5>
+                                            <p class="card-text">Clique aqui para pesquisar os inadimplentes.</p>
+                                            <a th:href="@{/pesqInadimplentes}"><button class="w-100 btn btn-lg btn-success" type="submit">Pesquisa de inadimplentes</button></a>
+                                        </div>
+                                </div>
+                            </div>                            
+                        </div>
+                        
+                        
+                        
+                        
                     </body>
                     </html>
