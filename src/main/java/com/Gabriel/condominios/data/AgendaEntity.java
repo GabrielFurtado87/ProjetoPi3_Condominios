@@ -16,11 +16,8 @@ public class AgendaEntity {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer idAgenda;  
+    private Integer id;  
     private String motivo;
     private Date dataAgendamento;
-    private Integer PESSOAS_idPESSOAS;
-   
-    
-    
+    private Integer idMoradores;
 }

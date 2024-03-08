@@ -5,13 +5,11 @@
 package com.Gabriel.condominios.model;
 
 import java.util.Date;
+import org.springframework.stereotype.Component;
 
-/**
- *
- * @author Gabriel_PC
- */
+@Component
 public class Agendamentos {
-
+    
     private Date data;
     private int apartamento;
     private String morador;

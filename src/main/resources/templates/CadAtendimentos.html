@@ -1,4 +1,4 @@
-<html xmlns="w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> 
+<html> 
     <head>
         <title>Home</title>
         <meta charset="UTF-8">
@@ -27,13 +27,12 @@
                                 </div>
                             </div>
                         </nav>
-                        <!<!-- Corpo do site cadastro de atendimentos -->
+                        <!-- Corpo do site cadastro de atendimentos -->
                         <div class="container mt-4">
                             <div class="row justify-content-md-center row-cols-3">
                                 <div class="row">
-                                    
                                     <div class="mb-3">
-                                        <form class=" p-4 p-md-5 border rounded-3 bg-light">
+                                        <form class=" p-4 p-md-5 border rounded-3 bg-light" id="formularioCriarAgendamento">
                                             <h2 class="text-center">Cadastro de atendimentos</h2>
                                         <div class="mb-3">
                                             <label for="dataCadastro" class="form-label">Data do cadastro</label>
@@ -41,8 +40,14 @@
                                         </div>
                                         <div class="mb-3">
                                             <label for="Morador" class="form-label">Morador</label>
-                                            <input type="text" class="form-control" id="Morador">
-                                        </div>                                        
+                                            <input type="text" class="form-control" id="idMorador">
+                                        </div>
+                                            <div>
+                                                <div>
+                                                <label for="motivo" class="form-label">Motivo</label>
+                                                </div>
+                                                <textarea class="p-4 p-md-5 mb-3" id="motivo" name="motivo" rows="5" cols="10"></textarea>
+                                            </div>
                                         <button type="submit" class="w-100 btn btn-primary">Cadastrar</button>
                                     </form>
                                     </div>    
@@ -50,7 +55,7 @@
                                 <div class="col-4">
                                     
                                     
-                                    <form class="p-4 p-md-5 border rounded-3 bg-light">
+                                    <form class="p-4 p-md-5 border rounded-3 bg-light" id="formularioFiltro">
                                         <h2 class="text-center">Filtrar Atendimentos</h2>
                                         <div class="mb-3">
                                             <label for="dataFiltro" class="form-label">Data para filtrar</label>
@@ -60,33 +65,22 @@
                                     </form>
                                 </div>
                                 <div class="col-4">
-                                    <table class="table">
+                                    
+                                    <table class="table" id="tabelaAtendimentos">
                                         <thead>
                                             <tr>                                                
-                                                <th scope="col">Data</th>
-                                                <th scope="col">Morador</th>                                               
+                                                <th>Data</th>
+                                                <th>Morador</th>                                               
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>15/02/2024</td>
-                                                <td>Maria</td>                                               
-                                            </tr>
-                                            <tr>
-                                                <td>15/02/2024</td>
-                                                <td>João</td>
-                                            </tr>
-                                            <tr>
-                                                <td>15/02/2024</td>
-                                                <td>José</td>
-                                            </tr>
-                                        </tbody>
+                                        <tbody></tbody>
                                     </table>
                                 </div>
                             </div>
 
                         </div>
 
-
+                        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>        
+                        <script th:src="@{/js/CadAtendimentos.js}"></script> 
                     </body>
                     </html>
