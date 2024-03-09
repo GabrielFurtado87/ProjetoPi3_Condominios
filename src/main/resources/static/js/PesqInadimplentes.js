@@ -1,6 +1,4 @@
 $(document).ready(function () {
-    alert("teste");
-    
     function carregarInadimplentes() {
         $.ajax({
             url: 'http://localhost:8080/pesqInadimplentes/buscar',
@@ -19,9 +17,7 @@ $(document).ready(function () {
 
                         let tr = $('<tr>').attr('data-idApartamentos', inadimplente.idApartamentos).append(idInad).append(idVaga).append(situacao);
                         $('#tabelaInadimplentes tbody').append(tr);
-                    }
-                    
-                    
+                    }    
                 }
             },
             error: function () {

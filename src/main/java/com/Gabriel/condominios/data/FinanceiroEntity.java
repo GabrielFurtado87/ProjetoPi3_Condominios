@@ -14,11 +14,11 @@ import lombok.Data;
 public class FinanceiroEntity {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;  
-    private Double SALDO;
-    private String DESCRICAO;    
-    private Double VALOR_TOTAL;
-    private Date DATA_GASTO;
+    private Double saldo;
+    private String descricao;    
+    private Double valorTotal;
+    private Date dataGasto;
     
 }

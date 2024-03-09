@@ -57,12 +57,17 @@ $(document).ready(function () {
     $('#formularioCriarAgendamento').submit(function (event) {
         event.preventDefault();              
         let dataAgendamento = $('#dataCadastro').val();
+        let utcDate = new Date(dataAgendamento);
+        let dataAjustada = new Date(utcDate.getTime() + utcDate.getTimezoneOffset() * 60000);
+        
+        alert(dataAjustada);
+        
         let idMorador = $('#idMorador').val();
         let motivo = $('#motivo').val();
 
-        let Agendamento = {            
+        let Agendamento = {
             motivo: motivo,
-            dataAgendamento: dataAgendamento,
+            dataAgendamento: dataAjustada,
             idMoradores: idMorador
         };
         criarAgendamento(Agendamento);
@@ -80,7 +85,7 @@ $(document).ready(function () {
                 for (let i = 0; i < data.length; i++) {
                     let agendamento = data[i];
                     let dataBanco = new Date(agendamento.dataAgendamento);
-                    let dataFormatada = ((dataBanco.getDate())) + "/" + ((dataBanco.getMonth() + 1)) + "/" + dataBanco.getFullYear();
+                    let dataFormatada = ((dataBanco.getDate()+1)) + "/" + ((dataBanco.getMonth() + 1)) + "/" + dataBanco.getFullYear();
                     if (dataAgendamento === dataFormatada) {
                         let dataAgendamento = $('<td>').text(dataFormatada);
                         let idMorador = $('<td>').text(agendamento.idMoradores);

@@ -33,7 +33,7 @@
                         <div class="container">
                             <div class="row mt-4">
                                 <div class="col">
-                                    <form class="row g-3">
+                                    <form class="row g-3" id="formularioCadGastos">
                                         <div class="col-md-6">
                                             <label for="dataGasto" class="form-label">Data Do Gasto</label>
                                             <input type="date" class="form-control" id="dataGasto">
@@ -55,12 +55,13 @@
                                     </form>
                                 </div>
                                 <div class="col text-center">
-                                    <h2>Saldo Atual : R$ 70.000,00 </h2>
+                                    <h2>Saldo Atual: R$ <span id="CampoSaldoAtual"></span></h2>
                                 </div>                                
                             </div>
                         </div>
 
-
+                        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>        
+                        <script th:src="@{/js/CadGastos.js}"></script>
 
 
                     </body>

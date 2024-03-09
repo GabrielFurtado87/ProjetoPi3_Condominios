@@ -19,7 +19,7 @@ public class pesqGastosController {
     
     
     @GetMapping("/buscar")
-    public ResponseEntity<List> listarInadimplentes(){
+    public ResponseEntity<List> listarGastos(){
      List<FinanceiroEntity> financeiro = pesqGastosService.listarGastos();
      return new ResponseEntity<>(financeiro, HttpStatus.OK);     
     }

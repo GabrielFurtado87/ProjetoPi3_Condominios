@@ -15,7 +15,7 @@ import lombok.Data;
 public class AgendaEntity {
     
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;  
     private String motivo;
     private Date dataAgendamento;
