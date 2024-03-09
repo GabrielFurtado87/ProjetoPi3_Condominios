@@ -13,8 +13,7 @@ public class AgendaService {
     AgendaRepository agendaRepository;
     //Criar agendamentos
     public AgendaEntity criarAgendamento(AgendaEntity agendamento){
-        //Foi retirado, pois como já haviam cadastros ele estava duplicando os ID's
-        //agendamento.setId(null);
+        agendamento.setId(null);
         agendaRepository.save(agendamento);
         return agendamento;        
     }

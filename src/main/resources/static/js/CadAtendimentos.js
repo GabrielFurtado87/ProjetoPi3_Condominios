@@ -55,16 +55,12 @@ $(document).ready(function () {
     }
 
     $('#formularioCriarAgendamento').submit(function (event) {
-        event.preventDefault();
-        let idcadastro = idAgendamento + 1;
-        
+        event.preventDefault();              
         let dataAgendamento = $('#dataCadastro').val();
         let idMorador = $('#idMorador').val();
         let motivo = $('#motivo').val();
 
-        let Agendamento = {
-            //Tive que incluir o id , o banco de dados já tem dados incluidos e estava duplicando.
-            id: idcadastro,
+        let Agendamento = {            
             motivo: motivo,
             dataAgendamento: dataAgendamento,
             idMoradores: idMorador

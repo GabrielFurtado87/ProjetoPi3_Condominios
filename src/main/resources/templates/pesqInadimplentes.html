@@ -27,51 +27,17 @@
                                 </div>
                             </div>
                         </nav>
-                        
-                        <!-- Inicio do corpo da pesquisa de inadimplentes -->
-                        
-                        <div class="container mt-4">
-                            <div class="row justify-content-md-center">
-                                <div class="row">                                    
-
-                                    <div class="col">
-                                    <div class="p-4 p-md-5 border rounded-3 bg-light">
-                                        <h2 class="text-center">Listar Inadimplentes</h2>                                                                                                                   
-                                        <button type="submit" class="w-100 btn btn-primary mt-4">Listar</button>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <table class="table">
+                        <table class="table" id="tabelaInadimplentes">
                                         <thead>
                                             <tr>    
                                                 <th scope="col">APARTAMENTO</th>
-                                                <th scope="col">MORADOR</th>
-                                                <th scope="col">CPF</th>                                               
+                                                <th scope="col">GARAGEM</th>
+                                                <th scope="col">SITUAÇÃO</th>                                               
                                             </tr>
                                         </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>15</td>
-                                                <td>Maria</td>   
-                                                <td>999.999.999-99</td>   
-                                            </tr>
-                                            <tr>
-                                                <td>12</td>
-                                                <td>João</td>   
-                                                <td>888.888.888-88</td>
-                                            </tr>
-                                            <tr>
-                                                <td>33</td>
-                                                <td>José</td>   
-                                                <td>777.777.777-77</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-
-                        </div>
-                        
-                        
+                                        <tbody></tbody>
+                                    </table>                             
+                         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>        
+                         <script th:src="@{/js/PesqInadimplentes.js}"></script>    
                     </body>
                     </html>
