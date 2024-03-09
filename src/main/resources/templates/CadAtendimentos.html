@@ -36,11 +36,11 @@
                                             <h2 class="text-center">Cadastro de atendimentos</h2>
                                         <div class="mb-3">
                                             <label for="dataCadastro" class="form-label">Data do cadastro</label>
-                                            <input type="date" class="form-control" id="dataCadastro">                                                
+                                            <input type="date" class="form-control" id="dataCadastro" required>                                                
                                         </div>
                                         <div class="mb-3">
-                                            <label for="Morador" class="form-label">Morador</label>
-                                            <input type="text" class="form-control" id="idMorador">
+                                            <label for="Morador" class="form-label">ID de Morador</label>
+                                            <input type="number" class="form-control" id="idMorador" required>
                                         </div>
                                             <div>
                                                 <div>
@@ -59,7 +59,7 @@
                                         <h2 class="text-center">Filtrar Atendimentos</h2>
                                         <div class="mb-3">
                                             <label for="dataFiltro" class="form-label">Data para filtrar</label>
-                                            <input type="date" class="form-control" id="dataFiltro">                                                
+                                            <input type="date" class="form-control" id="dataFiltro" required>                                                
                                         </div>                                                                           
                                         <button type="submit" class="w-100 btn btn-primary">Filtrar</button>
                                     </form>

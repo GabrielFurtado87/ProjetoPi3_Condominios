@@ -77,9 +77,7 @@ $(document).ready(function () {
         if(inicial =="" || final == ""){
            alert("Favor inserir as duas datas - Carregando a lista total");
            carregarGastos(); 
-        }else{
-            alert("data final ajustada"+dataFinalAjustada)
-            alert("data inicial ajustada" + dataInicialAjustada)
+        }else{           
             carregarPorData(dataInicialAjustada , dataFinalAjustada);
         }
         

@@ -60,8 +60,6 @@ $(document).ready(function () {
         let utcDate = new Date(dataAgendamento);
         let dataAjustada = new Date(utcDate.getTime() + utcDate.getTimezoneOffset() * 60000);
         
-        alert(dataAjustada);
-        
         let idMorador = $('#idMorador').val();
         let motivo = $('#motivo').val();
 
@@ -111,7 +109,6 @@ $(document).ready(function () {
         let dataEntrada = $("#dataFiltro").val();
         let dataFiltro = new Date(dataEntrada);
         let dataFiltroFormatado = ((dataFiltro.getDate() + 1)) + "/" + ((dataFiltro.getMonth() + 1)) + "/" + dataFiltro.getFullYear();
-        alert(dataFiltroFormatado);
         filtrarAgendamento(dataFiltroFormatado);
     });
 
