@@ -36,7 +36,7 @@
                                 <div class="row">                                    
 
                                     <div class="col">
-                                        <form class="row g-3 p-4 p-md-5 border rounded-3 bg-light">
+                                        <form class="row g-3 p-4 p-md-5 border rounded-3 bg-light" id="FormularioPesqGastos">
                                             <h2 class="text-center">Pesquisar gastos</h2>
                                             <div class="col-md-6">
                                                 <label for="dataInicial" class="form-label">DE</label>
@@ -52,31 +52,16 @@
                                         </form>
                                     </div>
                                     <div class="col">
-                                        <table class="table">
+                                        <table class="table" id="tabelaPesqGastos">
                                             <thead>
                                                 <tr>    
-                                                    <th scope="col">DATA</th>
+                                                    <th scope="col">ID</th>
                                                     <th scope="col">VALOR</th>
+                                                    <th scope="col">DATA</th>
                                                     <th scope="col">DESCRIÇÃO</th>                                               
                                                 </tr>
                                             </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>15/02/2024</td>
-                                                    <td>R$3.000,00</td>   
-                                                    <td>REFORMA PÁTIO</td>   
-                                                </tr>
-                                                <tr>
-                                                    <td>10/02/2024</td>
-                                                    <td>R$2.000,00</td>   
-                                                    <td>MANUTENÇÃO ELEVADOR</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>12/02/2024</td>
-                                                    <td>R$500,00</td>   
-                                                    <td>Materiais de escritório</td>
-                                                </tr>
-                                            </tbody>
+                                            <tbody></tbody>
                                         </table>
                                     </div>
                                 </div>
@@ -85,6 +70,7 @@
 
 
 
-
+                            <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>        
+                            <script th:src="@{/js/PesqGastos.js}"></script> 
                     </body>
                     </html>
